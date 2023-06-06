@@ -1,0 +1,11 @@
+def two_sum(nums, target) :
+    memo = set(nums)
+
+    for num in nums :
+        needed_number = target - num
+        if needed_number in memo and needed_number != num :
+            return True
+    
+    return False
+
+print(two_sum(nums = [4,1,9,7,8,2], target = 14))
