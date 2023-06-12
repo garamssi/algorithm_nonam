@@ -1,3 +1,5 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/42576
+
 def solution(participant, completion):
     participant_dict = {}
     completion_dict = {}
@@ -24,3 +26,14 @@ def solution(participant, completion):
 
 result = solution( participant = ["leo", "kiki", "eden"], completion = ["eden", "kiki"]);
 print(result)
+
+
+'''
+프로그래머스 문제 답안
+
+import collections
+
+def solution(participant, completion):
+    answer = collections.Counter(participant) - collections.Counter(completion)
+    return list(answer.keys())[0]
+'''
